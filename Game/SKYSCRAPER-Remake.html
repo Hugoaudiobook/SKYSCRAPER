@@ -148,7 +148,7 @@ img{-webkit-user-drag:none}
 .c-stat.hp{right:.3em}.c-stat.hp .ic{right:.04em}
 .c-stat.hp b{-webkit-text-stroke-color:#ec4b57}
 .c-spell{position:absolute;left:50%;bottom:.28em;transform:translateX(-50%);font-size:.8em;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--cc);padding:.05em .6em;border-radius:.6em;border:.1em solid #fff}
-.c-name{position:absolute;left:-.4em;right:-.4em;top:100%;margin-top:.35em;text-align:center;font-weight:900;font-size:1.12em;line-height:1.1;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c-name{position:absolute;left:-.3em;right:-.3em;top:100%;margin-top:.3em;text-align:center;font-weight:900;font-size:1.02em;line-height:1.16;color:var(--ink);white-space:normal;overflow-wrap:break-word;word-break:normal;hyphens:auto}
 .c-count{position:absolute;left:.3em;top:2.45em;background:#2a3646;color:#fff;border-radius:.7em;font-size:.95em;font-weight:900;padding:0 .45em;border:.1em solid #fff}
 .c-lv{position:absolute;left:50%;transform:translateX(-50%);bottom:.3em;font-size:.78em;background:rgba(20,30,45,.7);color:#fff;border-radius:.6em;padding:0 .5em;font-weight:800}
 .c-new{position:absolute;right:-.2em;top:1.7em;background:#ff8a0a;color:#fff;font-size:.8em;font-weight:900;padding:0 .5em;border-radius:.5em;border:.1em solid #fff}
@@ -172,13 +172,19 @@ img{-webkit-user-drag:none}
 .db-slots{display:flex;gap:8px;margin-top:12px}
 .dslot{width:80px;height:99px;cursor:pointer;flex:none}
 .dslot.empty{border:3px dashed #c3ccd6;border-radius:10px;background:#f1f4f8}
-.filters{position:absolute;left:12px;right:12px;top:196px;height:60px;display:flex;gap:6px;align-items:center}
-.filters button{height:52px;min-width:60px;border-radius:14px;border:3px solid #cfd8e2;background:#fff;font-weight:900;font-size:20px;padding:0 10px;color:#4a5866;display:grid;place-items:center}
+.filters{position:absolute;left:12px;right:12px;top:196px;height:60px;display:flex;gap:5px;align-items:center}
+.filters button{height:52px;min-width:50px;border-radius:14px;border:3px solid #cfd8e2;background:#fff;font-weight:900;font-size:18px;padding:0 8px;color:#4a5866;display:grid;place-items:center;white-space:nowrap}
 .filters button.on{background:var(--blue);border-color:var(--blue-d);color:#fff}
-.filters .emb{width:34px;height:34px}
+.filters .emb{width:32px;height:32px}
+.sortwrap{position:relative;flex:none;display:flex}
+.sortwrap>button{white-space:nowrap;min-width:64px}
+.sortmenu{position:absolute;right:0;top:58px;z-index:40;background:#fff;border:3px solid #cfd8e2;border-radius:14px;box-shadow:0 10px 24px rgba(0,0,0,.3);overflow:hidden;min-width:252px}
+.sortmenu button{display:block;width:100%;height:54px;border:0;border-bottom:2px solid #eef2f6;background:#fff;font-family:inherit;font-size:22px;font-weight:900;color:#3c4958;text-align:left;padding:0 16px;white-space:nowrap}
+.sortmenu button:last-child{border-bottom:0}
+.sortmenu button.on{background:var(--blue);color:#fff}
 .coll{margin-left:auto;font-weight:900;color:#5b6978;font-size:22px}
 .grid{position:absolute;left:0;right:0;top:268px;bottom:0;overflow-y:auto;padding:12px 14px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 10px;align-content:start}
-.gcell{position:relative;padding-bottom:40px;display:flex;justify-content:center;cursor:pointer}
+.gcell{position:relative;padding-bottom:52px;display:flex;justify-content:center;cursor:pointer}
 .ind{position:absolute;right:6px;top:34px;z-index:3;font-size:15px;font-weight:900;background:#35b968;color:#fff;border-radius:8px;padding:0 6px;border:2px solid #fff}
 .grid::-webkit-scrollbar,.shop-scroll::-webkit-scrollbar,.modal::-webkit-scrollbar{width:8px}
 .grid::-webkit-scrollbar-thumb,.shop-scroll::-webkit-scrollbar-thumb,.modal::-webkit-scrollbar-thumb{background:#b9c4d0;border-radius:4px}
@@ -246,9 +252,10 @@ img{-webkit-user-drag:none}
 .un-pick{padding:50px 34px;text-align:center}
 .un-pick h2{font-size:46px;margin:0 0 10px;color:#27425e}
 .un-pick p{font-size:24px;color:#4a6078;line-height:1.35;margin:0 0 26px}
-.un-opts{display:flex;flex-direction:column;gap:14px}
-.un-opts button{display:flex;align-items:center;gap:18px;border:4px solid var(--cc);background:#fff;border-radius:18px;height:96px;padding:0 24px;font-size:34px;font-weight:900;color:#27323f;box-shadow:0 4px 0 rgba(0,0,0,.12)}
-.un-opts .emb{width:64px;height:64px}
+.un-opts{display:flex;flex-direction:column;gap:10px}
+.un-opts button{display:flex;align-items:center;gap:16px;border:4px solid var(--cc);background:#fff;border-radius:18px;min-height:92px;height:auto;padding:10px 20px;font-size:32px;font-weight:900;color:#27323f;box-shadow:0 4px 0 rgba(0,0,0,.12);text-align:left}
+.un-opts button>span{flex:1;min-width:0}
+.un-opts .emb{width:60px;height:60px;flex:none}
 .un-card{margin:16px;background:#fff;border:3px solid #cdd8e3;border-radius:16px;overflow:hidden;padding-bottom:18px}
 .un-tabs{display:flex}
 .un-tabs button{flex:1;height:78px;border:0;background:#e1e7ee;color:#6b7886;font-size:28px;font-weight:900;border-bottom:3px solid #cdd8e3}
@@ -300,6 +307,9 @@ img{-webkit-user-drag:none}
 #s-battle{background:#0b1620}
 #b-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 #b-cells,#b-units,#b-fx{position:absolute;inset:0;pointer-events:none}
+/* Units are stacked above the turn indicator (z-index 26) so they are never
+   hidden by the turn bar when they stand on top of it. */
+#b-units{z-index:27}
 .cell{position:absolute;width:178px;height:178px;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.18);border-radius:6px;pointer-events:auto}
 .cell.hl{background:rgba(255,232,110,.36);border-color:#ffe36b;box-shadow:inset 0 0 26px rgba(255,232,110,.85);animation:pulse .7s infinite alternate}
 .cell.over{background:rgba(255,232,110,.75)}
@@ -315,7 +325,7 @@ img{-webkit-user-drag:none}
 .u-stat.hp.hurt b{color:#ffe3e5}
 .u-stat.atk.buff b{color:#7dff3a;-webkit-text-stroke-color:#fff}
 .u-stat.atk.debuff b{color:#c9a0ff;-webkit-text-stroke-color:#5b2a8c}
-.u-gauge{position:absolute;left:2px;right:2px;bottom:2px;height:14px;background:#2b3138;border:2px solid rgba(255,255,255,.5);border-radius:5px;overflow:hidden}
+.u-gauge{position:absolute;left:2px;right:2px;bottom:2px;height:14px;background:#2b3138;border:2px solid rgba(255,255,255,.5);border-radius:5px;overflow:hidden;z-index:5}
 .u-gauge i{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:#ffe84a;will-change:transform}
 .unit.fast .u-gauge i{background:#ff8c1a}
 .unit.slow .u-gauge i{background:#a64dff}
@@ -324,7 +334,7 @@ img{-webkit-user-drag:none}
 .unit.buffed .u-img{filter:drop-shadow(0 0 9px #8dff4a) drop-shadow(0 4px 3px rgba(0,0,0,.35))}
 .unit.hl::after,.unit.over::after{content:'';position:absolute;inset:0;border:5px solid #ffe36b;border-radius:10px;box-shadow:0 0 22px #ffe36b,inset 0 0 22px rgba(255,232,110,.6);animation:pulse .6s infinite alternate;pointer-events:none}
 .unit.over::after{background:rgba(255,232,110,.35)}
-.leader{position:absolute;left:375px;width:190px;height:140px;transform:translate(-50%,-50%);pointer-events:none}
+.leader{position:absolute;left:375px;width:190px;height:140px;transform:translate(-50%,-50%);pointer-events:none;z-index:28}
 #leader-e{top:92px}#leader-p{top:1010px}
 .leader .hex{inset:0}
 .l-stat{position:absolute;bottom:-8px;font-size:48px}
@@ -334,7 +344,9 @@ img{-webkit-user-drag:none}
 .l-stat.hp{right:-14px}.l-stat.hp .ic{right:10px}
 .l-stat.hp b{-webkit-text-stroke-color:#ec4b57;color:#ffeef0}
 .leader.low .l-stat.hp b{color:#ff9aa3}
-#b-turn{position:absolute;left:0;top:505px;width:660px;height:62px;pointer-events:none}
+/* The turn indicator sits in the middle of the board again; the units layer is
+   stacked above it so a unit standing over the bar is never hidden by it. */
+#b-turn{position:absolute;left:0;top:513px;width:660px;height:62px;pointer-events:none;z-index:26}
 #b-turnlabel{position:absolute;left:4px;top:4px;width:94px;text-align:center}
 #b-turnlabel span{display:block;font-size:25px;font-weight:900;color:#fff;-webkit-text-stroke:5px #243242;paint-order:stroke fill;line-height:1.1}
 #b-turnlabel em{display:block;font-style:normal;font-size:17px;font-weight:900;color:#fff;background:#2b3540;border-radius:8px;padding:2px 0;letter-spacing:1px}
@@ -405,6 +417,17 @@ img{-webkit-user-drag:none}
 .turnban small{display:block;font-size:30px;letter-spacing:3px;-webkit-text-stroke:8px #1a2b45;paint-order:stroke fill;margin-top:-6px;text-align:center}
 .unit.fast .u-gauge{box-shadow:0 0 7px 1px #ff9a2e}
 .unit.slow .u-gauge{box-shadow:0 0 7px 1px #b36bff}
+/* ---------- acting / ready indicators (original: red aura on the acting unit) ---------- */
+@keyframes actring{0%,100%{transform:translate(-50%,-50%) scale(.88);opacity:.6}50%{transform:translate(-50%,-50%) scale(1.07);opacity:1}}
+.unit.acting .u-in::before{content:'';position:absolute;left:50%;top:44%;width:188px;height:188px;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(255,60,50,0) 0%,rgba(255,50,42,.12) 50%,rgba(255,58,48,.88) 71%,rgba(255,40,32,.34) 86%,rgba(255,40,32,0) 100%);
+  box-shadow:0 0 26px 8px rgba(255,55,45,.5);animation:actring .6s ease-in-out infinite;pointer-events:none}
+.unit.acting .u-img{filter:drop-shadow(0 0 11px #ff4034) drop-shadow(0 4px 3px rgba(0,0,0,.35))}
+.unit.ready .u-gauge{box-shadow:0 0 9px 2px rgba(255,232,74,.95)}
+.unit.ready .u-gauge i{background:#fff27a}
+.leader.acting::after{content:'';position:absolute;left:50%;top:50%;width:214px;height:214px;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(255,120,100,.08) 0%,rgba(255,95,80,.26) 48%,rgba(255,62,52,.68) 66%,rgba(255,40,40,0) 86%);
+  animation:actring .6s ease-in-out infinite;pointer-events:none}
 .c-cost.down{background:#26a85e!important}.c-cost.up{background:#d9382d!important}
 .hf-lv{font-size:22px;color:#6b7886}
 .u-stat.hp.buff b{color:#7dff3a;-webkit-text-stroke-color:#fff}
@@ -432,7 +455,7 @@ img{-webkit-user-drag:none}
 .skin .hex{position:relative;width:100%;height:100%;display:block}
 .skin.on .hex{filter:drop-shadow(0 0 6px #ffd23c) drop-shadow(0 0 3px #ffd23c)}
 .un-opts button{text-align:left}
-.un-opts button small{display:block;font-size:20px;font-weight:700;color:#5a6b7d;margin-top:2px}
+.un-opts button small{display:block;font-size:19px;font-weight:700;color:#5a6b7d;margin-top:2px;line-height:1.25}
 .c-slab{position:absolute;left:50%;transform:translateX(-50%);bottom:1.4em;background:rgba(18,26,40,.85);color:#fff;font-size:1.6em;font-weight:900;padding:0 .5em;border-radius:.5em;border:.1em solid #fff;white-space:nowrap}
 .unit.sealed .u-img{filter:grayscale(.85) brightness(1.1)}
 .unit.sealed::before{content:'⛔';position:absolute;left:6px;top:6px;font-size:34px;z-index:3}
@@ -711,9 +734,18 @@ const PRICE = [0, 400, 1200, 4000, 12000];
 const AV_CLAN = ['P','R','R','R','B','B','G','G','G','Y','Y','Y','P','P','P','R','N','G','N','P','R','B','G','N','P','Y'];
 const PLAYER_AVATAR = 11;
 function xpNeed(L){ return 100 + 50 * L; }
-function leaderFor(L){ const l = Math.max(1, Math.min(L, 12)) + 1; return {hp: 18 * l, counter: l}; }
+/* Leader progression: level 1 = 2 attack / 50 HP, each level up adds +1 attack and
+   +25 HP, capped at 10 attack and 250 HP (reached at level 9). */
+const LEADER_MAX_HP = 250, LEADER_MAX_ATK = 10;
+function leaderFor(L){ const l = Math.max(1, Math.min(L, 40)); return {hp: Math.min(50 + 25 * (l - 1), LEADER_MAX_HP), counter: Math.min(2 + (l - 1), LEADER_MAX_ATK)}; }
 const MAX_LEVEL = 40;
 const DECK_SIZE = 12, DECKS_N = 5;
+const CARD_SORTS = [
+  {id:'none', label:'Default order', short:'Sort'},
+  {id:'hp',   label:'Most health',  short:'HP'},
+  {id:'atk',  label:'Most attack',  short:'ATK'},
+  {id:'stat', label:'Most overall stats', short:'Stats'}
+];
 const DECK_LIMIT_SPELL = 1, DECK_LIMIT_UNIT = 3;
 function deckLimit(c){ return c.type === 'spell' ? DECK_LIMIT_SPELL : DECK_LIMIT_UNIT; }
 
@@ -735,7 +767,7 @@ const FLOORS = 4;
 const FOE_NAMES = ['Rook','Mina','Taro','Elin','Bram','Sora','Kit','Luna','Orrin','Yuki','Dax','Nell','Hiro','Isla','Garrick','Pia','Vesper','Joss','Reina','Cato','Ilex','Maro','Tess','Boone','Aoi','Fenn','Odile','Perrin','Zara','Lio'];
 const BOSS_TITLES = ['Path Warden','Keep Marshal','Terrace Sentinel','Garden Matron','Crag Overlord','Magma Lord','Chief Engineer','Spire Hermit','Gallery Archivist','Stair Warden','Tower Sovereign'];
 function difficulty(a, f){ return a * FLOORS + (f - 1); }
-const ENEMY_TUNE = {hp:1.12, lvShift:1, skill0:0.7, ctr:0};
+const ENEMY_TUNE = {hp:0.81, lvShift:1, skill0:0.7, ctr:0};
 function foeLevel(d, boss){ return Math.min(9, 1 + Math.floor((d + ENEMY_TUNE.lvShift) * 8.99 / 44)); }
 
 function buildEnemy(a, f){
@@ -846,7 +878,7 @@ function packById(id){ return PACKS.find(p => p.id === id); }
 
 'use strict';
 /* ============ SKYSCRAPER — battle engine v3 (abilities follow the community stats sheet) ============ */
-const CFG = {TICK:0.05, TURN_LEN:30, PICK_LEN:30, MAX_TURN:15, BASE_INT:10, START_MANA:3, FIRST_MAX_MANA:5, CAP_MANA:8, COUNTER_DELAY:0.7, COUNTER_GAP:0.5, HAND:4, OPEN:5, OPEN_CAP:8, LANES:3};
+const CFG = {TICK:0.05, TURN_LEN:30, PICK_LEN:30, MAX_TURN:15, BASE_INT:10, START_MANA:3, FIRST_MAX_MANA:5, CAP_MANA:8, COUNTER_DELAY:0.7, COUNTER_GAP:0.5, ACT_LOCK:0.75, HAND:4, OPEN:5, OPEN_CAP:8, LANES:3};
 const NOAB = {};
 
 function shuffle(a, rng){ for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(rng() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
@@ -871,7 +903,8 @@ function createBattle(opts){
   const S = {
     rng, time:0, turn:1, turnTime:0, phase:'pick', pickLeft:CFG.PICK_LEN, over:false, result:null, timeUp:false, nextId:1, uid:1000,
     pending:[], events:[], units:[], sides:[newSide(opts.player, rng), newSide(opts.enemy, rng)],
-    auto:[!!opts.playerAI, opts.enemyAI !== false], keepEvents:opts.keepEvents !== false, dealt:[0, 0]
+    auto:[!!opts.playerAI, opts.enemyAI !== false], keepEvents:opts.keepEvents !== false, dealt:[0, 0],
+    lock:0, actUnit:0, actLeader:-1
   };
   S.sides[0].skill = opts.playerSkill || 0.8;
   enterPick(S);
@@ -938,7 +971,7 @@ function spawn(S, si, lane, slot, entry, depth){
   const c = CARDS[entry.id], cardLv = entry.lv || 1, lv = cardLv + 1;
   const u = {id:S.nextId++, side:si, lane, slot, cid:c.id, card:c, ab:c.ab, lv, cardLv, basePow:c.atk * lv, baseHp:c.hp * lv, base:c.atk * lv, baseHpOrig:c.hp * lv,
     permPow:0, permHp:0, auraPow:0, auraHp:0, dmg:0, atk:0, hp:0, max:0, gauge:S.rng() * 0.2, spd:1, frozen:0, petrified:false, petrifyNext:false,
-    nullUsed:false, sealed:false, dead:false, lastHit:null, born:S.time};
+    nullUsed:false, sealed:false, dead:false, lastHit:null, born:S.time, readyAt:null};
   S.units.push(u); refresh(S);
   ev(S, 'spawn', {unit:u.id, side:si});
   summonFx(S, u, depth || 0);
@@ -1137,7 +1170,7 @@ function act(S, u){
     hitLeader(S, t.leader, pow);
     if (!u.dead){ const lc = S.lc || (S.lc = [-9, -9]); const at = Math.max(S.time + CFG.COUNTER_DELAY, lc[t.leader] + CFG.COUNTER_GAP); lc[t.leader] = at; S.pending.push({t:at, uid:u.id, side:t.leader}); }
   }
-  if (u.ab.e_attackSplash) for (const x of S.units.filter(y => y !== u && y !== exclude && !y.dead)) hurt(S, u, x, u.ab.e_attackSplash * u.lv, 'splash');
+  if (u.ab.e_attackSplash) for (const x of S.units.filter(y => y !== u && y !== exclude && !y.dead && y.side !== u.side)) hurt(S, u, x, u.ab.e_attackSplash * u.lv, 'splash');
   if (u.ab.e_attackSelf) addPerm(S, u, u.ab.e_attackSelf[0] * u.lv, u.ab.e_attackSelf[1] * u.lv);
   if (u.ab.e_attackSelfDmg) hurt(S, null, u, u.ab.e_attackSelfDmg * u.lv, 'effect');
   if (u.ab.e_attackHeal) healUnit(S, u, u.ab.e_attackHeal * u.lv);
@@ -1170,7 +1203,7 @@ function regenRate(S, si){
   return r;
 }
 function enterPick(S){
-  S.phase = 'pick'; S.pickLeft = CFG.PICK_LEN;
+  S.phase = 'pick'; S.pickLeft = CFG.PICK_LEN; S.lock = 0; S.actUnit = 0; S.actLeader = -1;
   for (let i = 0; i < 2; i++){
     const s = S.sides[i]; s.ready = false; s.pickLog = []; refillPool(S, i);
     if (S.auto[i]){ aiPick(S, i); s.ready = true; }
@@ -1213,17 +1246,34 @@ function tick(S, dt){
   for (let i = 0; i < 2; i++){ const s = S.sides[i]; s.mana = Math.min(s.maxMana, s.mana + regenRate(S, i) * dt); }
   for (let i = 0; i < 2; i++) if (S.auto[i]) aiStep(S, i, dt);
   refresh(S);
+  /* ---------- global action lock: only ONE action at a time ----------
+     Like the original game, a unit whose attack gauge is full has to WAIT
+     for the current action to finish before it may act. The oldest ready
+     unit (gauge filled first) acts first. */
+  if (S.lock && S.time >= S.lock){ S.lock = 0; S.actUnit = 0; S.actLeader = -1; }
   const acts = [];
   for (const u of S.units){
     if (u.dead) continue;
-    if (u.petrified){ if (u.gauge >= 1) acts.push(u); continue; }
-    u.gauge += dt / interval(u);
-    if (u.gauge >= 1) acts.push(u);
+    if (u.petrified){ if (u.gauge >= 1){ if (u.readyAt == null) u.readyAt = S.time; acts.push(u); } continue; }
+    if (u.gauge < 1) u.gauge += dt / interval(u);
+    if (u.gauge >= 1){ u.gauge = 1; if (u.readyAt == null) u.readyAt = S.time; acts.push(u); }
+    else u.readyAt = null;
   }
-  for (const u of acts) act(S, u);
-  if (S.pending.length){
-    const due = S.pending.filter(p => p.t <= S.time); S.pending = S.pending.filter(p => p.t > S.time);
-    for (const p of due){ const u = unitById(S, p.uid); if (u && !u.dead){ const cn = S.sides[p.side].leader.counter; ev(S, 'counter', {side:p.side, unit:u.id, amount:cn}); hurt(S, null, u, cn, 'counter'); } }
+  if (!S.lock){
+    const due = S.pending.filter(p => p.t <= S.time);
+    if (due.length){
+      /* a leader counterattack that is due takes the action slot */
+      due.sort((a, b) => a.t - b.t);
+      const p = due[0];
+      S.pending = S.pending.filter(x => x !== p);
+      const u = unitById(S, p.uid);
+      if (u && !u.dead){ const cn = S.sides[p.side].leader.counter; ev(S, 'counter', {side:p.side, unit:u.id, amount:cn}); hurt(S, null, u, cn, 'counter'); S.actUnit = 0; S.actLeader = p.side; S.lock = S.time + CFG.ACT_LOCK; }
+    } else if (acts.length){
+      acts.sort((a, b) => (a.readyAt - b.readyAt) || (a.id - b.id));
+      const u = acts[0];
+      act(S, u);
+      S.actUnit = u.id; S.actLeader = -1; S.lock = S.time + CFG.ACT_LOCK;
+    }
   }
   settle(S);
   S.turnTime += dt;
@@ -1446,9 +1496,46 @@ const Store = {
   reset(){ this.d = defaultSave(); this.save(); }
 };
 
-/* ---------- audio (synthesised + the original jingle) ---------- */
+/* ---------- audio: real sound effects from ./sfx (with synth fallback) ----------
+   The "sfx" folder next to this file holds the extracted sound effects.
+   Every entry below is a path relative to that folder. If a file is missing the
+   game falls back to the built-in synthesised tone so nothing ever goes silent. */
+const SFX_FILES = {
+  /* --- interface --- */
+  click:   'ui_click/ui_click_1.wav',
+  error:   'ui_other/ui_other_8.wav',
+  confirm: 'ui_other/ui_other_11.wav',
+  cancel:  'ui_other/ui_other_2.wav',
+  /* --- cards & packs --- */
+  flip:    'card/card_3.wav',
+  draw:    'card/card_4.wav',
+  coin:    'card/card_1.wav',
+  rare:    'card/card_9.wav',
+  card:    'card/card_5.wav',
+  pack:    'card_pack/card_pack_1.wav',
+  packOpen:'card_pack/card_pack_3.wav',
+  packRare:'card_pack/card_pack_9.wav',
+  /* --- units & battle --- */
+  place:   'unit/unit_1.wav',
+  unit:    'unit/unit_2.wav',
+  hit:     'unit_attack/unit_attack_1.wav',
+  attack:  'unit_attack/unit_attack_45.wav',
+  attack2: 'unit_attack/unit_attack_76.wav',
+  die:     'battle/battle_7.wav',
+  spell:   'spell/spell_1.wav',
+  heal:    'ability/ability_1.wav',
+  buff:    'ability/ability_13.wav',
+  turn:    'battle/battle_2.wav',
+  start:   'battle/battle_3.wav',
+  emote:   'emote/emote_1.wav',
+  /* --- items & stingers --- */
+  upgrade: 'item/item_1.wav',
+  levelup: '_jingles_stingers/jingle_1.wav',
+  win:     '_jingles_stingers/jingle_2.wav',
+  lose:    '_jingles_stingers/jingle_3.wav'
+};
 const Snd = {
-  ctx:null, master:null, jingle:null,
+  ctx:null, master:null, jingle:null, base:'sfx/', pools:{}, broken:{}, warned:false,
   init(){
     if (this.ctx){ if (this.ctx.state === 'suspended') this.ctx.resume(); return; }
     try {
@@ -1468,23 +1555,50 @@ const Snd = {
     const s = c.createBufferSource(); s.buffer = b; const f = c.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = freq || 1200; f.Q.value = 0.8;
     const g = c.createGain(); g.gain.value = vol || 0.3; s.connect(f); f.connect(g); g.connect(this.master); s.start(t);
   },
-  play(name){
-    if (!Store.d || !Store.d.sound || !this.ctx) return;
+  /* play a real sound-effect file; falls back to the synth when it is missing */
+  file(name){
+    const f = SFX_FILES[name]; if (!f || this.broken[name]) return null;
+    let pool = this.pools[name]; if (!pool) pool = this.pools[name] = [];
+    let a = null;
+    for (const p of pool) if (p.paused && !p.error){ a = p; break; }
+    if (!a){
+      a = new Audio(this.base + f);
+      a.preload = 'auto'; a.volume = 0.9;
+      a.addEventListener('error', () => {
+        this.broken[name] = true;
+        if (!this.warned){ this.warned = true; toast('Sound files not found. Keep the "sfx" folder next to the game file.'); }
+      });
+      pool.push(a);
+      if (pool.length > 8) pool.shift();
+    }
+    return a;
+  },
+  play(name, vol){
+    if (!Store.d || !Store.d.sound) return;
+    if (name === 'lose'){ try { Music.stopBgm(0.4); } catch (e) {} }
+    try {
+      const a = this.file(name);
+      if (a){ try { a.currentTime = 0; a.volume = vol == null ? 0.9 : vol; a.play(); } catch (e) {} return; }
+    } catch (e) {}
+    this.synth(name);
+  },
+  synth(name){
+    if (!this.ctx) return;
     try {
       switch (name){
         case 'click': this.tone(660, 0.06, 'triangle', 0.18); break;
         case 'place': this.tone(220, 0.14, 'triangle', 0.3, 0, 440); this.noise(0.08, 0.12, 0, 600); break;
-        case 'hit': this.noise(0.09, 0.28, 0, 1500); this.tone(150, 0.1, 'square', 0.12, 0, 70); break;
+        case 'hit': case 'attack': this.noise(0.09, 0.28, 0, 1500); this.tone(150, 0.1, 'square', 0.12, 0, 70); break;
         case 'die': this.tone(300, 0.28, 'sawtooth', 0.14, 0, 70); break;
         case 'spell': this.tone(500, 0.35, 'sine', 0.22, 0, 1400); this.tone(750, 0.35, 'triangle', 0.12, 0.05, 1800); break;
-        case 'heal': this.tone(660, 0.12, 'sine', 0.2); this.tone(990, 0.2, 'sine', 0.16, 0.08); break;
+        case 'heal': case 'buff': this.tone(660, 0.12, 'sine', 0.2); this.tone(990, 0.2, 'sine', 0.16, 0.08); break;
         case 'error': this.tone(180, 0.14, 'square', 0.14); break;
         case 'upgrade': [523, 659, 784].forEach((f, i) => this.tone(f, 0.18, 'square', 0.1, i * 0.08)); break;
-        case 'turn': this.tone(520, 0.1, 'triangle', 0.14); this.tone(780, 0.14, 'triangle', 0.12, 0.08); break;
+        case 'turn': case 'start': this.tone(520, 0.1, 'triangle', 0.14); this.tone(780, 0.14, 'triangle', 0.12, 0.08); break;
         case 'coin': this.tone(1200, 0.08, 'square', 0.1); this.tone(1600, 0.16, 'square', 0.1, 0.07); break;
         case 'flip': this.tone(400, 0.08, 'triangle', 0.18, 0, 900); break;
         case 'rare': [660, 880, 1100, 1320].forEach((f, i) => this.tone(f, 0.25, 'triangle', 0.16, i * 0.07)); break;
-        case 'pack': this.noise(0.5, 0.2, 0, 800); [440, 660, 880, 1320].forEach((f, i) => this.tone(f, 0.3, 'sine', 0.14, 0.25 + i * 0.08)); break;
+        case 'pack': case 'packOpen': this.noise(0.5, 0.2, 0, 800); [440, 660, 880, 1320].forEach((f, i) => this.tone(f, 0.3, 'sine', 0.14, 0.25 + i * 0.08)); break;
         case 'levelup': if (!Music.jingle('jinglebeta')) [523, 659, 784, 1047].forEach((f, i) => this.tone(f, 0.22, 'square', 0.1, i * 0.09)); break;
         case 'win': if (!Music.jingle('jingle4')) [523, 659, 784, 1047, 1319].forEach((f, i) => this.tone(f, 0.3, 'triangle', 0.2, i * 0.11)); break;
         case 'lose': Music.stopBgm(0.4); [392, 349, 311, 262].forEach((f, i) => this.tone(f, 0.4, 'sawtooth', 0.12, i * 0.2)); break;
@@ -1913,6 +2027,7 @@ const Multiplayer = {
       const a = S.sides[0]; S.sides[0] = S.sides[1]; S.sides[1] = a;
       S.units.forEach(u => { u.side = 1 - u.side; u.lastHit = null; });
       (S.pending || []).forEach(p => { if (p.side != null) p.side = 1 - p.side; });
+      if (S.actLeader != null && S.actLeader >= 0) S.actLeader = 1 - S.actLeader;
       if (S.dealt) S.dealt.reverse();
       if (S.result === 'win') S.result = 'lose'; else if (S.result === 'lose') S.result = 'win';
     }
@@ -2078,7 +2193,7 @@ const Battle = {
     $('#b-hand').classList.toggle('hidden', pick && !S.over);
     this.sel = null; this.clearHL(); this.handKey = ''; this.pickKey = '';
     if (pick){ $('#pk-title').textContent = 'TURN ' + S.turn; this.announce('TURN ' + S.turn, 'PICK YOUR CARDS'); Snd.play('turn'); }
-    else { this.announce('BATTLE!', ''); if (!first) Snd.play('turn'); }
+    else { this.announce('BATTLE!', ''); Snd.play(first ? 'start' : 'turn'); }
   },
   go(){ const S = this.S; if (!S || S.phase !== 'pick' || this.over) return; Snd.play('click'); if (Multiplayer.isClient()) Multiplayer.sendAction('ready'); else setReady(S, 0); },
   onPickClick(e){
@@ -2134,7 +2249,7 @@ const Battle = {
     d.innerHTML = '<div class="u-in"><img class="u-img" src="' + unitSrc(u.cid) + '" alt="" draggable="false">' +
       '<div class="u-stat atk">' + ICON.sword + '<b></b></div><div class="u-stat hp">' + ICON.shield + '<b></b></div><div class="u-gauge"><i></i></div></div>';
     $('#b-units').appendChild(d);
-    const o = {el:d, inner:d.firstChild, img:d.querySelector('.u-img'), atk:d.querySelector('.atk b'), hp:d.querySelector('.hp b'), g:d.querySelector('.u-gauge i'), last:{}, x:p.x, y:p.y, cid:u.cid, lane:u.lane, slot:u.slot, side:u.side};
+    const o = {id:u.id, el:d, inner:d.firstChild, img:d.querySelector('.u-img'), atk:d.querySelector('.atk b'), hp:d.querySelector('.hp b'), g:d.querySelector('.u-gauge i'), last:{}, x:p.x, y:p.y, cid:u.cid, lane:u.lane, slot:u.slot, side:u.side};
     this.unitEls.set(u.id, o); return o;
   },
   updateUnits(){
@@ -2155,6 +2270,10 @@ const Battle = {
       if (!u.petrified && !u.dead && gv < 1){ const ex = this.simExtra(); if (ex > 0) gv = Math.min(1, gv + ex / interval(u)); }
       gv = Math.round(gv * 1000) / 1000;
       if (L.g !== gv){ o.g.style.transform = 'scaleX(' + gv + ')'; L.g = gv; }
+      const ac = !!S.actUnit && id === S.actUnit;
+      if (L.ac !== ac){ o.el.classList.toggle('acting', ac); L.ac = ac; }
+      const rdy = !ac && !u.dead && u.gauge >= 0.999;
+      if (L.rd !== rdy){ o.el.classList.toggle('ready', rdy); L.rd = rdy; }
       const fz = !!u.petrified; if (L.f !== fz){ o.el.classList.toggle('frozen', fz); L.f = fz; }
       const bf = u.spd > 1.01, sl = u.spd < 0.99; if (L.b !== bf){ o.el.classList.toggle('fast', bf); L.b = bf; } if (L.s !== sl){ o.el.classList.toggle('slow', sl); L.s = sl; }
       const sd = !!u.sealed; if (L.d !== sd){ o.el.classList.toggle('sealed', sd); L.d = sd; }
@@ -2177,7 +2296,9 @@ const Battle = {
     for (let si = 0; si < 2; si++){
       const hv = $((si === 0 ? '#leader-p' : '#leader-e') + ' .hpv'), v = Math.max(0, Math.ceil(S.sides[si].leader.hp));
       if (hv.textContent !== String(v)) hv.textContent = v;
-      $(si === 0 ? '#leader-p' : '#leader-e').classList.toggle('low', S.sides[si].leader.hp < S.sides[si].leader.max * 0.3);
+      const le = $(si === 0 ? '#leader-p' : '#leader-e');
+      le.classList.toggle('low', S.sides[si].leader.hp < S.sides[si].leader.max * 0.3);
+      le.classList.toggle('acting', S.actLeader === si);
     }
     if (S.phase === 'pick'){
       const sec = Math.max(0, Math.ceil(S.pickLeft)), se = $('#pk-sec'); if (se.textContent !== String(sec)) se.textContent = sec;
@@ -2311,6 +2432,7 @@ const Battle = {
     const p = LEAD_XY[si], d = el('<div class="bubble s' + si + '">' + EMOTES[i] + '</div>');
     d.style.left = (p.x + 115) + 'px'; d.style.top = (si === 0 ? p.y - 100 : p.y + 30) + 'px';
     $('#b-fx').appendChild(d); setTimeout(() => d.remove(), 2100);
+    Snd.play('emote', 0.6);
   },
   emote(si, i){
     this.showEmote(si, i);
@@ -2331,22 +2453,22 @@ const Battle = {
           if (o) o.inner.animate([{transform:'scale(.4) translateY(-34px)', opacity:0}, {transform:'scale(1.12)', opacity:1, offset:.65}, {transform:'scale(1)'}], {duration:340, easing:'ease-out'});
           Snd.play('place'); break;
         }
-        case 'attack': this.lunge(e); Snd.play('hit'); break;
-        case 'counter': this.counterFx(e); break;
+        case 'attack': this.lunge(e); Snd.play('attack'); break;
+        case 'counter': this.counterFx(e); Snd.play('hit'); break;
         case 'dmg': this.hitUnit(e.unit, e.amount, e.kind); break;
         case 'ldmg': this.hitLeader(e.side, e.amount); break;
         case 'heal': this.floatAtUnit(e.unit, '+' + e.amount, 'heal'); Snd.play('heal'); break;
         case 'lheal': this.floatAt(LEAD_XY[e.side].x + 60, LEAD_XY[e.side].y - 20, '+' + e.amount, 'heal'); Snd.play('heal'); break;
         case 'die': this.dieUnit(e); break;
-        case 'spell': this.cutinFx({art:e.card, name:CARDS[e.card].name, side:e.side}, true); break;
+        case 'spell': this.cutinFx({art:e.card, name:CARDS[e.card].name, side:e.side}, true); Snd.play('spell'); break;
         case 'nullify': { const o = this.unitEls.get(e.unit); if (o){ this.floatAt(o.x + CW / 2, o.y + 50, 'NULL', 'heal'); o.inner.animate([{filter:'brightness(3)'}, {filter:'none'}], {duration:400}); } break; }
         case 'seal': { const o = this.unitEls.get(e.unit); if (o){ this.floatAt(o.x + CW / 2, o.y + 50, 'SEALED', 'zero'); o.inner.animate([{filter:'grayscale(1) brightness(1.6)'}, {filter:'none'}], {duration:500}); } break; }
         case 'turn': Snd.play('turn'); break;
         case 'buff': { const o = this.unitEls.get(e.unit); if (o) o.inner.animate([{filter:e.up ? 'brightness(2.6) saturate(2)' : 'brightness(.5) saturate(2)'}, {filter:'none'}], {duration:600}); break; }
         case 'open': this.floatAt(375, 1070, '+1 choice', 'heal'); break;
         case 'maxmana': this.floatAt(375, 1070, 'Max mana +1', 'heal'); break;
-        case 'draw': this.floatAt(375, 1070, 'Card drawn', 'heal'); break;
-        case 'shuffle': if (e.side === 0) this.floatAt(375, 1070, 'Deck reshuffled', 'heal'); break;
+        case 'draw': this.floatAt(375, 1070, 'Card drawn', 'heal'); Snd.play('draw', 0.45); break;
+        case 'shuffle': if (e.side === 0){ this.floatAt(375, 1070, 'Deck reshuffled', 'heal'); Snd.play('flip', 0.5); } break;
         case 'petrify': { const o = this.unitEls.get(e.unit); if (o) o.inner.animate([{filter:'grayscale(1) brightness(2)'}, {filter:'none'}], {duration:500}); break; }
         case 'over': this.onOver(e.result); break;
       }
@@ -2442,7 +2564,7 @@ function mdhm(t){ const d = new Date(t), p = n => (n < 10 ? '0' : '') + n; retur
 function ordinal(n){ const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
 
 const Game = {
-  screen:'title', cardsUI:{filter:'all'}, unionUI:{tab:'this'},
+  screen:'title', cardsUI:{filter:'all', sort:'none'}, unionUI:{tab:'this'},
 
   boot(){
     Store.load(); Stage.fit();
@@ -2574,6 +2696,7 @@ const Game = {
       '<p><b>Turns.</b> A turn lasts 30 seconds (change it, and the game speed, in Settings → Game rules &amp; speed). Mana starts at 3 with a maximum of 5. The maximum grows by 1 at each new turn, up to 8. From turn 2 onward, you gain 1 Mana instantly at the start of the turn, and your refill over the turn is calculated from the full maximum: 5 Mana over turn 1, 6 over turn 2, 7 over turn 3, then 8 per turn at the cap. Mana still cannot exceed the current maximum, so the refill reaches the cap sooner.</p>' +
       '<p><b>Pick phase.</b> Between turns you get 30 seconds to pick cards into your hand (4 slots) from 5 choices out of your 12-card deck. Picking does not refill the choices — they are topped up once per round. In one pick you may only take <b>one colour plus colourless</b> cards; cards already in your hand don\'t count. The deck reshuffles when it runs out.</p>' +
       '<p><b>Battle.</b> Drag a card onto an empty cell on your half, or tap it and then a cell. Spells are cast on a unit (tap the card, then the target). A normal attack takes about 10 seconds. Hover a card (or press and hold on a phone) to read its effect.</p>' +
+      '<p><b>One action at a time.</b> When a unit\'s attack gauge fills it is ready, and a red aura marks the unit that is acting right now. Only <b>one action happens at a time</b>: units that are ready wait their turn until the current attack (or leader counterattack) finishes, so attacks are spread out instead of landing all at once.</p>' +
       '<p><b>Counterattack.</b> Units attack the nearest enemy in their lane, or the leader if the lane is clear. <b>A leader hits back at every unit that attacks it</b> (the number on its portrait).</p>' +
       '<p><b>Progress.</b> Every win gives crystals, XP and a card pack. Level up cards (stats <i>and</i> ability numbers scale), open packs, and change your leader skin on the Home screen.</p>' +
       '<p class="dim">Desktop: keys 1–4 pick a card, Enter = GO, P pauses.</p></div><div class="m-btns"><button class="btn blue">Got it</button></div>', {cls:'wide'});
@@ -2700,7 +2823,10 @@ const Game = {
     s.innerHTML = '<div class="deckbox"><div class="db-tabs"><b>Deck</b>' + tabs + '<span class="db-count ' + (d.deck.length === DECK_SIZE ? 'ok' : 'bad') + '">' + d.deck.length + ' / ' + DECK_SIZE + '</span><span class="db-avg">avg cost ' + avg + '</span></div>' +
       '<div class="db-btns"><button class="btn mini orange" id="c-random">Random</button><button class="btn mini gray" id="c-clear">Clear</button><button class="btn mini orange" id="c-levels">Set levels</button><button class="btn mini unlock-btn" id="c-unlock-all">Unlock all</button></div>' +
       '<div class="db-slots"></div></div>' +
-      '<div class="filters">' + filters.map(f => '<button data-f="' + f[0] + '" class="' + (ui.filter === f[0] ? 'on' : '') + '">' + f[1] + '</button>').join('') + '<span class="coll">' + owned + '/' + CARD_LIST.length + '</span></div>' +
+      '<div class="filters">' + filters.map(f => '<button data-f="' + f[0] + '" class="' + (ui.filter === f[0] ? 'on' : '') + '">' + f[1] + '</button>').join('') +
+      '<div class="sortwrap"><button id="c-sort" class="' + (ui.sort !== 'none' ? 'on' : '') + '">' + (CARD_SORTS.find(x => x.id === ui.sort) || CARD_SORTS[0]).short + ' ▾</button>' +
+      '<div class="sortmenu hidden">' + CARD_SORTS.map(x => '<button data-s="' + x.id + '" class="' + (ui.sort === x.id ? 'on' : '') + '">' + x.label + '</button>').join('') + '</div></div>' +
+      '<span class="coll">' + owned + '/' + CARD_LIST.length + '</span></div>' +
       '<div class="grid"></div>';
     const slots = $('.db-slots', s);
     for (let i = 0; i < DECK_SIZE; i++){
@@ -2713,7 +2839,13 @@ const Game = {
       slots.appendChild(sl);
     }
     const grid = $('.grid', s);
-    CARD_LIST.filter(c => ui.filter === 'all' || (ui.filter === 'owned' ? d.owned[c.id] > 0 : ui.filter === 'spell' ? c.type === 'spell' : c.clan === ui.filter)).forEach(c => {
+    const shown = CARD_LIST.filter(c => ui.filter === 'all' || (ui.filter === 'owned' ? d.owned[c.id] > 0 : ui.filter === 'spell' ? c.type === 'spell' : c.clan === ui.filter));
+    if (ui.sort && ui.sort !== 'none'){
+      const stat = c => cardStats(c, d.levels[c.id] || 1);
+      const val = c => { const st = stat(c); return ui.sort === 'hp' ? st.hp : ui.sort === 'atk' ? st.atk : st.atk + st.hp; };
+      shown.sort((a, b) => val(b) - val(a) || a.name.localeCompare(b.name));
+    }
+    shown.forEach(c => {
       const n = d.owned[c.id] || 0, cell = el('<div class="gcell"></div>');
       const ce = cardEl(c, {w:158, lv:d.levels[c.id] || 1, name:n > 0, locked:n === 0, count:n > 1 ? n : null});
       if (n > 0 && deckCnt[c.id]) cell.appendChild(el('<div class="ind">In deck ×' + deckCnt[c.id] + '</div>'));
@@ -2725,7 +2857,20 @@ const Game = {
     });
     grid.scrollTop = keep;
     $$('.dtab', s).forEach(b => b.onclick = () => { Snd.play('click'); this.setDeckIdx(+b.dataset.i); this.renderCards(); });
-    $$('.filters button', s).forEach(b => b.onclick = () => { ui.filter = b.dataset.f; Snd.play('click'); this.renderCards(); });
+    $$('.filters button[data-f]', s).forEach(b => b.onclick = () => { ui.filter = b.dataset.f; Snd.play('click'); this.renderCards(); });
+    const sortBtn = $('#c-sort', s), sortMenu = $('.sortmenu', s);
+    if (sortBtn && sortMenu){
+      sortBtn.onclick = e => {
+        e.stopPropagation(); Snd.play('click');
+        const opening = sortMenu.classList.contains('hidden');
+        sortMenu.classList.toggle('hidden');
+        if (opening){
+          const close = ev => { if (!sortMenu.contains(ev.target) && ev.target !== sortBtn){ sortMenu.classList.add('hidden'); document.removeEventListener('pointerdown', close, true); } };
+          setTimeout(() => document.addEventListener('pointerdown', close, true), 0);
+        }
+      };
+      $$('button[data-s]', sortMenu).forEach(b => b.onclick = () => { ui.sort = b.dataset.s; Snd.play('click'); this.renderCards(); });
+    }
     $('#c-random', s).onclick = () => { Snd.play('click'); this.randomDeck(); };
     $('#c-clear', s).onclick = () => { d.deck = []; Store.save(); Snd.play('click'); this.renderCards(); };
     $('#c-levels', s).onclick = () => { Snd.play('click'); this.setAllCardLevels(); };
@@ -2999,6 +3144,7 @@ const Game = {
   openPack(p, res){
     const node = el('<div class="po"></div>');
     const ov = openModal(node, {dismiss:false, cls:'pk-modal'});
+    Snd.play('packOpen', 0.8);
     const finish = () => { closeModal(ov); if (this.screen === 'shop'){ this.renderShop(); } this.renderTop(); };
     const stageCards = () => {
       node.innerHTML = '<h3 class="po-t">' + (p ? p.name : 'Purchased') + '</h3><div class="po-grid n' + res.length + '"></div><div class="po-btns"><button class="btn blue" id="po-all">Reveal all</button></div>';
